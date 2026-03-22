@@ -47,5 +47,8 @@ def predict():
     except Exception as e:
         return f"Error: {e}"
 
+import os
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
