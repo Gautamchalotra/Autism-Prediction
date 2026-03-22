@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Autism Prediction</title>
+  </head>
+
+  <body>
+    <h2>Autism Prediction System</h2>
+
+    <form action="/predict" method="post">
+      <h3>AQ Test Scores</h3>
+
+      A1: <input type="number" name="A1_Score" min="0" max="1" required /><br />
+      A2: <input type="number" name="A2_Score" min="0" max="1" required /><br />
+      A3: <input type="number" name="A3_Score" min="0" max="1" required /><br />
+      A4: <input type="number" name="A4_Score" min="0" max="1" required /><br />
+      A5: <input type="number" name="A5_Score" min="0" max="1" required /><br />
+      A6: <input type="number" name="A6_Score" min="0" max="1" required /><br />
+      A7: <input type="number" name="A7_Score" min="0" max="1" required /><br />
+      A8: <input type="number" name="A8_Score" min="0" max="1" required /><br />
+      A9: <input type="number" name="A9_Score" min="0" max="1" required /><br />
+      A10:<input
+        type="number"
+        name="A10_Score"
+        min="0"
+        max="1"
+        required
+      /><br />
+
+      <br />
+
+      <h3>Personal Info</h3>
+
+      Age: <input type="number" name="age" required /><br /><br />
+
+      Gender:
+      <select name="gender">
+        <option value="m">male</option>
+        <option value="f">female</option></select
+      ><br /><br />
+
+      Ethnicity:
+      <input type="text" name="ethnicity" required /><br /><br />
+
+      Jaundice:
+      <select name="jaundice">
+        <option value="yes">yes</option>
+        <option value="no">no</option></select
+      ><br /><br />
+
+      Family History (austim):
+      <select name="austim">
+        <option value="yes">yes</option>
+        <option value="no">no</option></select
+      ><br /><br />
+
+      Country:
+      <input type="text" name="contry_of_res" required /><br /><br />
+
+      Used App Before:
+      <select name="used_app_before">
+        <option value="yes">yes</option>
+        <option value="no">no</option></select
+      ><br /><br />
+      Relation:
+      <select name="relation">
+        <option value="Self">Self</option>
+        <option value="Others">Others</option></select
+      ><br /><br />
+
+      <input type="submit" value="Predict" />
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+  </body>
+</html>
