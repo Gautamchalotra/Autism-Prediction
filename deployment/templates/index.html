@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html>
   <head>
     <title>Autism Prediction</title>
@@ -72,5 +72,87 @@
     </form>
 
     <h3>{{ prediction_text }}</h3>
+  </body>
+</html> -->
+<!doctype html>
+<html>
+  <head>
+    <title>Autism Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Autism Prediction System 🧠</h2>
+
+      <form action="/predict" method="post">
+        <h3>AQ Test Scores</h3>
+
+        <input
+          type="number"
+          name="A1_Score"
+          placeholder="A1 Score (0 or 1)"
+          required
+        />
+        <input type="number" name="A2_Score" placeholder="A2 Score" required />
+        <input type="number" name="A3_Score" placeholder="A3 Score" required />
+        <input type="number" name="A4_Score" placeholder="A4 Score" required />
+        <input type="number" name="A5_Score" placeholder="A5 Score" required />
+        <input type="number" name="A6_Score" placeholder="A6 Score" required />
+        <input type="number" name="A7_Score" placeholder="A7 Score" required />
+        <input type="number" name="A8_Score" placeholder="A8 Score" required />
+        <input type="number" name="A9_Score" placeholder="A9 Score" required />
+        <input
+          type="number"
+          name="A10_Score"
+          placeholder="A10 Score"
+          required
+        />
+
+        <h3>Personal Information</h3>
+
+        <input type="number" name="age" placeholder="Age" required />
+
+        <select name="gender">
+          <option value="m">Male</option>
+          <option value="f">Female</option>
+        </select>
+
+        <select name="jaundice">
+          <option value="yes">Jaundice: Yes</option>
+          <option value="no">Jaundice: No</option>
+        </select>
+
+        <select name="austim">
+          <option value="yes">Family History: Yes</option>
+          <option value="no">Family History: No</option>
+        </select>
+
+        <select name="used_app_before">
+          <option value="yes">Used App Before: Yes</option>
+          <option value="no">Used App Before: No</option>
+        </select>
+
+        <select name="relation">
+          <option value="Self">Self</option>
+          <option value="Others">Others</option>
+        </select>
+
+        <input type="text" name="ethnicity" placeholder="Ethnicity" required />
+        <input
+          type="text"
+          name="contry_of_res"
+          placeholder="Country"
+          required
+        />
+
+        <button type="submit">Predict</button>
+      </form>
+
+      <div class="result">{{ prediction_text }}</div>
+    </div>
   </body>
 </html>
