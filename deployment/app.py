@@ -40,9 +40,10 @@ def predict():
 
         prediction = model.predict(final_input)[0]
 
-        result = "Autism Detected " if prediction == 1 else "No Autism "
-
-        return render_template("index.html", prediction_text=result)
+        if prediction == 1:
+         return render_template("autism.html")
+        else:
+         return render_template("no_autism.html")
 
     except Exception as e:
         return f"Error: {e}"

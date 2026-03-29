@@ -1,161 +1,3 @@
-<!-- <!doctype html>
-<html>
-  <head>
-    <title>Autism Prediction</title>
-  </head>
-
-  <body>
-    <h2>Autism Prediction System</h2>
-
-    <form action="/predict" method="post">
-      <h3>AQ Test Scores</h3>
-
-      A1: <input type="number" name="A1_Score" min="0" max="1" required /><br />
-      A2: <input type="number" name="A2_Score" min="0" max="1" required /><br />
-      A3: <input type="number" name="A3_Score" min="0" max="1" required /><br />
-      A4: <input type="number" name="A4_Score" min="0" max="1" required /><br />
-      A5: <input type="number" name="A5_Score" min="0" max="1" required /><br />
-      A6: <input type="number" name="A6_Score" min="0" max="1" required /><br />
-      A7: <input type="number" name="A7_Score" min="0" max="1" required /><br />
-      A8: <input type="number" name="A8_Score" min="0" max="1" required /><br />
-      A9: <input type="number" name="A9_Score" min="0" max="1" required /><br />
-      A10:<input
-        type="number"
-        name="A10_Score"
-        min="0"
-        max="1"
-        required
-      /><br />
-
-      <br />
-
-      <h3>Personal Info</h3>
-
-      Age: <input type="number" name="age" required /><br /><br />
-
-      Gender:
-      <select name="gender">
-        <option value="m">male</option>
-        <option value="f">female</option></select
-      ><br /><br />
-
-      Ethnicity:
-      <input type="text" name="ethnicity" required /><br /><br />
-
-      Jaundice:
-      <select name="jaundice">
-        <option value="yes">yes</option>
-        <option value="no">no</option></select
-      ><br /><br />
-
-      Family History (austim):
-      <select name="austim">
-        <option value="yes">yes</option>
-        <option value="no">no</option></select
-      ><br /><br />
-
-      Country:
-      <input type="text" name="contry_of_res" required /><br /><br />
-
-      Used App Before:
-      <select name="used_app_before">
-        <option value="yes">yes</option>
-        <option value="no">no</option></select
-      ><br /><br />
-      Relation:
-      <select name="relation">
-        <option value="Self">Self</option>
-        <option value="Others">Others</option></select
-      ><br /><br />
-
-      <input type="submit" value="Predict" />
-    </form>
-
-    <h3>{{ prediction_text }}</h3>
-  </body>
-</html> -->
-<!-- <!doctype html>
-<html>
-  <head>
-    <title>Autism Prediction</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
-  </head>
-
-  <body>
-    <div class="container">
-      <h2>Autism Prediction System 🧠</h2>
-
-      <form action="/predict" method="post">
-        <h3>AQ Test Scores</h3>
-
-        <input
-          type="number"
-          name="A1_Score"
-          placeholder="A1 Score (0 or 1)"
-          required
-        />
-        <input type="number" name="A2_Score" placeholder="A2 Score" required />
-        <input type="number" name="A3_Score" placeholder="A3 Score" required />
-        <input type="number" name="A4_Score" placeholder="A4 Score" required />
-        <input type="number" name="A5_Score" placeholder="A5 Score" required />
-        <input type="number" name="A6_Score" placeholder="A6 Score" required />
-        <input type="number" name="A7_Score" placeholder="A7 Score" required />
-        <input type="number" name="A8_Score" placeholder="A8 Score" required />
-        <input type="number" name="A9_Score" placeholder="A9 Score" required />
-        <input
-          type="number"
-          name="A10_Score"
-          placeholder="A10 Score"
-          required
-        />
-
-        <h3>Personal Information</h3>
-
-        <input type="number" name="age" placeholder="Age" required />
-
-        <select name="gender">
-          <option value="m">Male</option>
-          <option value="f">Female</option>
-        </select>
-
-        <select name="jaundice">
-          <option value="yes">Jaundice: Yes</option>
-          <option value="no">Jaundice: No</option>
-        </select>
-
-        <select name="austim">
-          <option value="yes">Family History: Yes</option>
-          <option value="no">Family History: No</option>
-        </select>
-
-        <select name="used_app_before">
-          <option value="yes">Used App Before: Yes</option>
-          <option value="no">Used App Before: No</option>
-        </select>
-
-        <select name="relation">
-          <option value="Self">Self</option>
-          <option value="Others">Others</option>
-        </select>
-
-        <input type="text" name="ethnicity" placeholder="Ethnicity" required />
-        <input
-          type="text"
-          name="contry_of_res"
-          placeholder="Country"
-          required
-        />
-
-        <button type="submit">Predict</button>
-      </form>
-
-      <div class="result">{{ prediction_text }}</div>
-    </div>
-  </body>
-</html> -->
 <!doctype html>
 <html>
   <head>
@@ -171,16 +13,87 @@
       <h2>Autism Prediction System 🧠</h2>
 
       <form action="/predict" method="post">
-        <h3>AQ Test Scores</h3>
+        <h3>Autism Screening Questions</h3>
 
-        <!-- A1 to A10 Dropdown (0 or 1) -->
-        {% for i in range(1,11) %}
-        <select name="A{{i}}_Score" required>
-          <option value="">A{{i}} Score</option>
-          <option value="0">0</option>
-          <option value="1">1</option>
+        <!-- A1 -->
+        <label>A1. Does your child respond when their name is called?</label>
+        <select name="A1_Score" required>
+          <option value="">Select</option>
+          <option value="0">0 (No)</option>
+          <option value="1">1 (Yes)</option>
         </select>
-        {% endfor %}
+
+        <!-- A2 -->
+        <label>A2. Does your child make eye contact?</label>
+        <select name="A2_Score" required>
+          <option value="">Select</option>
+          <option value="0">0 (No)</option>
+          <option value="1">1 (Yes)</option>
+        </select>
+
+        <!-- A3 -->
+        <label>A3. Does your child point to show interest?</label>
+        <select name="A3_Score" required>
+          <option value="">Select</option>
+          <option value="0">0 (No)</option>
+          <option value="1">1 (Yes)</option>
+        </select>
+
+        <!-- A4 -->
+        <label>A4. Does your child play with other children?</label>
+        <select name="A4_Score" required>
+          <option value="">Select</option>
+          <option value="0">0 (No)</option>
+          <option value="1">1 (Yes)</option>
+        </select>
+
+        <!-- A5 -->
+        <label>A5. Does your child imitate actions (clap/wave)?</label>
+        <select name="A5_Score" required>
+          <option value="">Select</option>
+          <option value="0">0 (No)</option>
+          <option value="1">1 (Yes)</option>
+        </select>
+
+        <!-- A6 -->
+        <label>A6. Does your child understand simple instructions?</label>
+        <select name="A6_Score" required>
+          <option value="">Select</option>
+          <option value="0">0 (No)</option>
+          <option value="1">1 (Yes)</option>
+        </select>
+
+        <!-- A7 -->
+        <label>A7. Does your child use gestures (bye, nod)?</label>
+        <select name="A7_Score" required>
+          <option value="">Select</option>
+          <option value="0">0 (No)</option>
+          <option value="1">1 (Yes)</option>
+        </select>
+
+        <!-- A8 -->
+        <label>A8. Does your child engage in pretend play?</label>
+        <select name="A8_Score" required>
+          <option value="">Select</option>
+          <option value="0">0 (No)</option>
+          <option value="1">1 (Yes)</option>
+        </select>
+
+        <!-- A9 -->
+        <label>A9. Does your child share enjoyment with you?</label>
+        <select name="A9_Score" required>
+          <option value="">Select</option>
+          <option value="0">0 (No)</option>
+          <option value="1">1 (Yes)</option>
+        </select>
+
+        <!-- A10 -->
+        <label>A10. Does your child show repetitive behavior?</label>
+        <select name="A10_Score" required>
+          <option value="">Select</option>
+          <option value="0">0 (No)</option>
+          <option value="1">1 (Yes)</option>
+        </select>
 
         <h3>Personal Information</h3>
 
@@ -306,8 +219,6 @@
 
         <button type="submit">Predict</button>
       </form>
-
-      <div class="result">{{ prediction_text }}</div>
     </div>
   </body>
 </html>
