@@ -10,89 +10,108 @@
 
   <body>
     <div class="container">
-      <h2>Autism Prediction System 🧠</h2>
+      <h2>Autism Prediction System</h2>
 
       <form action="/predict" method="post">
         <h3>Autism Screening Questions</h3>
 
         <!-- A1 -->
-        <label>A1. Does your child respond when their name is called?</label>
+        <label>A1. Does your child avoid eye contact?</label>
         <select name="A1_Score" required>
-          <option value="">Select</option>
-          <option value="0">0 (No)</option>
-          <option value="1">1 (Yes)</option>
+          <option value="" disabled selected hidden>Select</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
         </select>
 
         <!-- A2 -->
         <label>A2. Does your child make eye contact?</label>
         <select name="A2_Score" required>
-          <option value="">Select</option>
-          <option value="0">0 (No)</option>
-          <option value="1">1 (Yes)</option>
+          <option value="" disabled selected hidden>Select</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
         </select>
 
         <!-- A3 -->
-        <label>A3. Does your child point to show interest?</label>
+        <label>A3. Does your child NOT point to show interest in things?</label>
         <select name="A3_Score" required>
-          <option value="">Select</option>
-          <option value="0">0 (No)</option>
-          <option value="1">1 (Yes)</option>
+          <option value="" disabled selected hidden>Select</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
         </select>
 
         <!-- A4 -->
-        <label>A4. Does your child play with other children?</label>
+        <label
+          >A4. Does your child prefer to play alone rather than with
+          others?</label
+        >
         <select name="A4_Score" required>
-          <option value="">Select</option>
-          <option value="0">0 (No)</option>
-          <option value="1">1 (Yes)</option>
+          <option value="" disabled selected hidden>Select</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
         </select>
 
         <!-- A5 -->
-        <label>A5. Does your child imitate actions (clap/wave)?</label>
+        <label
+          >A5. Does your child NOT imitate actions like clapping or
+          waving?</label
+        >
         <select name="A5_Score" required>
-          <option value="">Select</option>
-          <option value="0">0 (No)</option>
-          <option value="1">1 (Yes)</option>
+          <option value="" disabled selected hidden>Select</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
         </select>
 
         <!-- A6 -->
-        <label>A6. Does your child understand simple instructions?</label>
+        <label
+          >A6. Does your child have difficulty understanding simple
+          instructions?</label
+        >
         <select name="A6_Score" required>
-          <option value="">Select</option>
-          <option value="0">0 (No)</option>
-          <option value="1">1 (Yes)</option>
+          <option value="" disabled selected hidden>Select</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
         </select>
 
         <!-- A7 -->
-        <label>A7. Does your child use gestures (bye, nod)?</label>
+        <label
+          >A7. Does your child NOT use gestures like waving or nodding?</label
+        >
         <select name="A7_Score" required>
-          <option value="">Select</option>
-          <option value="0">0 (No)</option>
-          <option value="1">1 (Yes)</option>
+          <option value="" disabled selected hidden>Select</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
         </select>
 
         <!-- A8 -->
-        <label>A8. Does your child engage in pretend play?</label>
+        <label
+          >A8. Does your child NOT engage in pretend or imaginative play?</label
+        >
         <select name="A8_Score" required>
-          <option value="">Select</option>
-          <option value="0">0 (No)</option>
-          <option value="1">1 (Yes)</option>
+          <option value="" disabled selected hidden>Select</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
         </select>
 
         <!-- A9 -->
-        <label>A9. Does your child share enjoyment with you?</label>
+        <label
+          >A9. Does your child rarely share enjoyment or emotions with
+          others?</label
+        >
         <select name="A9_Score" required>
-          <option value="">Select</option>
-          <option value="0">0 (No)</option>
-          <option value="1">1 (Yes)</option>
+          <option value="" disabled selected hidden>Select</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
         </select>
 
         <!-- A10 -->
-        <label>A10. Does your child show repetitive behavior?</label>
+        <label
+          >A10. Does your child show repetitive behaviors (e.g., hand flapping,
+          repeating actions)?</label
+        >
         <select name="A10_Score" required>
-          <option value="">Select</option>
-          <option value="0">0 (No)</option>
-          <option value="1">1 (Yes)</option>
+          <option value="" disabled selected hidden>Select</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
         </select>
 
         <h3>Personal Information</h3>
@@ -110,42 +129,44 @@
 
         <!-- Gender -->
         <select name="gender" required>
-          <option value="">Select Gender</option>
+          <option value="" disabled selected hidden>Select Gender</option>
           <option value="m">Male</option>
           <option value="f">Female</option>
         </select>
 
         <!-- Jaundice -->
         <select name="jaundice" required>
-          <option value="">Jaundice</option>
+          <option value="" disabled selected hidden>Jaundice</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
 
         <!-- Family History -->
         <select name="austim" required>
-          <option value="">Family History</option>
+          <option value="" disabled selected hidden>Family History</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
 
         <!-- Used App Before -->
         <select name="used_app_before" required>
-          <option value="">Used App Before</option>
+          <option value="" disabled selected hidden>Used App Before</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
 
         <!-- Relation -->
         <select name="relation" required>
-          <option value="">Relation</option>
+          <option value="" disabled selected hidden>
+            Relation With Patient
+          </option>
           <option value="Self">Self</option>
           <option value="Others">Others</option>
         </select>
 
         <!-- Ethnicity Dropdown -->
         <select name="ethnicity" required>
-          <option value="">Select Ethnicity</option>
+          <option value="" disabled selected hidden>Select Ethnicity</option>
           <option value="White-European">White-European</option>
           <option value="Asian">Asian</option>
           <option value="Black">Black</option>
@@ -159,7 +180,7 @@
 
         <!-- Country Dropdown -->
         <select name="contry_of_res">
-          <option value="">Select Country</option>
+          <option value="" disabled selected hidden>Select Country</option>
 
           <option value="Austria">Austria</option>
           <option value="India">India</option>
